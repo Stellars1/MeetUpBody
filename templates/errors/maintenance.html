@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Bakım Modu - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3 text-center">
+        <h1 class="display-4 mb-4">Bakım Modu</h1>
+        <p class="lead mb-4">Sitemiz şu anda bakımda. Lütfen daha sonra tekrar deneyin.</p>
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Yükleniyor...</span>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Sayfa Bulunamadı - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3 text-center">
+        <h1 class="display-1">404</h1>
+        <h2 class="mb-4">Sayfa Bulunamadı</h2>
+        <p class="lead mb-4">Aradığınız sayfa bulunamadı veya taşınmış olabilir.</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Ana Sayfaya Dön</a>
+    </div>
+</div>
+{% endblock %} 
