@@ -1,0 +1,26 @@
+{% extends "base/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Kayıt Ol - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Kayıt Ol</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn btn-primary w-100" type="submit">Kayıt Ol</button>
+                </form>
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                        Zaten hesabınız var mı? <a class="ms-2" href="{% url 'login' %}">Giriş Yap</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
